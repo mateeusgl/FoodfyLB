@@ -1,0 +1,27 @@
+{% extends '../layout.njk' %}
+
+{% block head %}
+    <title>Admin Foodfy - {{user.name}}</title>
+{% endblock %}
+
+{% block content %}
+    <section class='container users-container'>
+        <div class='upper-wrapper'>
+            <h1>Bem vindo {{user.name}}</h1>
+
+            <form method='POST' action='/admin/profile?_method=PUT'>
+                <button class='button' type='submit'>Salvar</button>
+        </div>
+
+            <div class='fields'>
+                {% include 'admin/profile/profile-fields.njk' %}
+            </div>
+    
+            <input 
+                type='hidden' 
+                name='id' 
+                value={{user.id}}
+            >
+        </form>   
+    </section>
+{% endblock %}

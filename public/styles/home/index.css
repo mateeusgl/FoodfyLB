@@ -1,0 +1,50 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container.header-home {
+    display: grid;
+    grid-template-columns: 175px 1fr 350px;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.links a {
+    color: var(--color-primary);
+}
+
+.links a:hover {
+    font-weight: bold;
+}
+
+.links a.active {
+    font-weight: bold;
+}
+
+.filter-form {
+    gap: 15px;
+    display: flex;
+    align-items: center; 
+    justify-content: flex-end;
+}
+
+.header-home .filter-form .input {
+    width: 100%;
+}
+
+.header-home .filter-form .input input {
+    padding: 10px;
+}
+
+footer {
+    background: var(--color-tertiary-ligther);
+    height: 62px;
+    padding: 25px;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 14px;
+    color: var(--color-secondary-ligther);
+    text-align: center;
+}

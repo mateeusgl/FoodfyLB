@@ -1,0 +1,26 @@
+{% import './recipes-list.njk' as show %}
+
+{% macro render(chef, recipes, class) %}
+    <main class='container chef-details'>
+        {{ caller() }}
+        <div class='banner'>
+            <div class='banner-img'>
+                <img 
+                    src='{{chef.src}}' 
+                    alt='Imagem de {{chef.name}}'
+                >
+            </div>
+        </div>
+
+        <div class='chef-info'>
+            <h2>{{chef.name}}</h2>
+            <h3>{{chef.total_recipes}} receitas</h3> 
+        </div>
+    
+    {% call show.render('recipes-container', recipes, 'admin/recipes') %}
+        <div class='upper-wrapper'>
+            <h1>Receitas</h1>  
+        </div>
+    {% endcall %}
+    </main>
+{% endmacro %}

@@ -1,0 +1,14 @@
+{% extends './layout.njk' %}
+{% import '../parts/chefs-list.njk' as show %}
+
+{% block head %}
+    <title>Foodfy - Chefs</title>
+{% endblock %}
+
+{% block content %}
+    {% call show.render(chefs, 'landing', '/chefs') %}
+    {% endcall %}
+
+    {% if chefs.recipeIndex %}
+    {% endif %}
+{% endblock %}

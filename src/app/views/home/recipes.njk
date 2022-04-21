@@ -1,0 +1,16 @@
+{% extends './layout.njk' %}
+{% import '../parts/recipes-list.njk' as show %}
+
+{% block head %}
+    <title>Foodfy - Receitas</title>
+{% endblock %}
+
+{% block content %}
+    {% call show.render('section-recipes', recipes, '') %}
+        {%if filter%}
+            <div class='upper-wrapper'>
+                <h1>Buscando por: "{{filter}}"</h1>
+            </div>
+        {% endif %}
+    {% endcall %}
+{% endblock %}

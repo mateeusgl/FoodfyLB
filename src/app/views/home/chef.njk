@@ -1,0 +1,11 @@
+{% extends './layout.njk' %}
+{% import '../parts/chef-details.njk' as show %}
+
+{% block head %}
+    <title>Foodfy - {{chef.title}}</title>
+{% endblock %}
+
+{% block content %}
+    {% call show.render(chef, recipes, '') %}
+    {% endcall %}
+{% endblock %}

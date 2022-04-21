@@ -1,0 +1,18 @@
+{% extends '../layout.njk' %}
+{% import '../../parts/chefs-list.njk' as show %}
+
+{% block head %}
+    <title>Admin Foodfy - Chefs</title>
+{% endblock %}
+
+{% block content %}
+    {% call show.render(chefs, 'admin', '/admin/chefs') %}
+        <div class='upper-wrapper'>
+            <h1>Gerenciar chefs</h1>
+            <a class='button link' href='/admin/chefs/create'>Novo</a>
+        </div>
+    {% endcall %}
+
+    {% if chefs.recipeIndex %}
+    {% endif %}
+{% endblock %}

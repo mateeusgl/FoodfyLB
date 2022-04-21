@@ -1,0 +1,20 @@
+{% extends '../layout.njk' %}
+
+{% block head %}
+    <title>Admin Foodfy - Criação Receita</title>
+{% endblock %}
+
+{% block content%}
+    <section class='container recipes-container'>
+        <form  method='POST' action='/admin/recipes' enctype='multipart/form-data'>
+            <div class='upper-wrapper'>
+                <h1>Criando receita</h1>
+                <button class='button' type='submit'>Salvar receita</button>
+            </div>
+
+            <div class='fields'>
+                {% include 'admin/recipes/fields.njk' %}    
+            </div>
+        </form>
+    </section>
+{% endblock %}

@@ -1,0 +1,23 @@
+<!DOCTYPE njk>
+<html lang='pt-br'>    
+    <head>
+        <meta charset='UTF-8'>
+
+        {% block head %}
+            <title>Admin Foodfy</title>
+        {% endblock %}
+        
+        {% include './parts/styles.njk' %}
+    </head>
+
+    <body>
+        {% include './parts/messages.njk' %}
+
+        {% include './parts/header.njk' %}
+
+        {% block content %}
+        {% endblock %}
+
+        <script type='text/javascript' src='../../../scripts.js'></script>
+    </body>
+</html>

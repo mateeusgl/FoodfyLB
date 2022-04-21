@@ -1,0 +1,10 @@
+{% extends '../layout.njk' %}
+{% import '../../parts/recipe-details.njk' as show %}
+
+{% block head %}
+    <title>Admin Foodfy - Receita {{recipe.title}}</title>
+{% endblock %}
+
+{% block content %}
+     {{show.details('Editando receita', recipe)}}
+{% endblock %}

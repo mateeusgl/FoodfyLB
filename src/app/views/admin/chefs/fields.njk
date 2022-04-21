@@ -1,0 +1,38 @@
+<div class='item'>
+    <h3>Nome</h3>
+    <div class='input'>
+        <input 
+            type='text' 
+            name='name' 
+            placeholder='Coloque seu nome.'
+            value='{{chef.name}}'
+        >
+    </div>
+</div>
+
+<div class='item'>
+    <h3>Avatar</h3>
+    <div id='photos-preview'>
+        {% if chef.src %}
+            <div class='photo' id='{{chef.file_id}}'>
+                <img src='{{chef.src}}' alt='Imagem de {{chef.name}}'>
+                <i class='material-icons'
+                    onclick='PhotosUpload.removeOldPhoto(event)'
+                >close</i>
+            </div>
+            
+            <input type='hidden' name='removed_files'>
+        {% endif %}
+    </div>
+
+    <div id='photos-upload'>
+        <input 
+            id='photos-input'
+            type='file' 
+            name='photos' 
+            accept='image/*'
+            onchange='PhotosUpload.handleFileInput(event, 1)'
+        >
+        <p class='button link'>Enviar Avatar</p>
+    </div>
+</div>

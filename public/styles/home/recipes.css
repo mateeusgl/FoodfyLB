@@ -1,0 +1,30 @@
+.section-recipes .recipes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 20px 0px;
+    gap: 20px;
+}
+
+.section-recipes .recipe-image img{
+    height: 140px;
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.section-recipes .recipe-info {
+    margin: 20px 0 10px 0;
+}
+
+.section-recipes .recipe-info h3 {
+    line-height: 24px;
+}
+
+    /* === HIDE === */
+    
+ .recipe-info .button.visualize {
+    display: none;
+    opacity: 0;
+    overflow: hidden;
+}

@@ -1,0 +1,44 @@
+@keyframes hidemessage {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes inputborder {
+    to {
+        border: 1px var(--color-delete) solid;
+    }
+}
+
+.messages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 345px;
+    height: 135px;
+    padding: 15px;
+    border-radius: 4px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    color: var(--color-tertiary);
+    opacity: 1;
+    visibility: visible;
+    animation: hidemessage 400ms 4s ease-out forwards;
+}
+
+.messages.error {
+    background-color: var(--color-delete);
+}
+
+.messages.success {
+    background-color: #01B12A;
+}
+
+.item .input input.error{
+    animation: inputborder  4s ease-out;
+}

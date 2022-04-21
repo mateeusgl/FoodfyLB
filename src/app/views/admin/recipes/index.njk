@@ -1,0 +1,15 @@
+{% extends '../layout.njk' %}
+{% import '../../parts/recipes-list.njk' as show %}
+
+{% block head %}
+    <title>Admin Foodfy - Receitas</title>
+{% endblock %}
+
+{% block content %}
+    {% call show.render('recipes-container', recipes, 'admin/recipes') %}
+        <div class='upper-wrapper'>
+            <h1>Gerenciar receitas</h1>  
+            <a class='button link' href='/admin/recipes/create'>Novo</a>
+        </div>
+    {% endcall %}
+{% endblock %}
