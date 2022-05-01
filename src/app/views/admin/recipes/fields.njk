@@ -82,15 +82,15 @@
             </div>    
         {% endif %}
     </div>
-    <button type='button' class='add-ingredient'>Adicionar novo ingrediente</button>
+    <button type='button' class='add-ingredient' onclick="AddFields.addIngredient()">Adicionar novo ingrediente</button>
 </div>
 
 <div class='item'>
     <h3>Modo de preparo</h3>
-    <div id='preparation'> 
+    <div id='preparations'> 
         {% if recipe.preparation.length > 0 %}
             {% for preparation in recipe.preparation %} 
-                <div class='input prepare'>
+                <div class='input preparation'>
                     <input
                         type='text' 
                         name='preparation[]' 
@@ -99,7 +99,7 @@
                 </div>
             {% endfor %}
         {% else %}
-            <div class='input prepare'>
+            <div class='input preparation'>
                 <input
                     type='text' 
                     name='preparation[]' 
@@ -109,7 +109,7 @@
             </div>
         {% endif %}
     </div>
-    <button type='button' class='add-prepare'>Adicionar novo passo</button>
+    <button type='button' class='add-prepare' onclick="AddFields.addPreparation()">Adicionar novo passo</button>
 </div>
 
 <div class='item'>
